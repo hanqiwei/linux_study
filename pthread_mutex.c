@@ -8,7 +8,7 @@ int count = 0;
 void *print_msg(void *arg)
 {
 	int i = 0;
-	//pthread_mutex_lock(&mutex);//上锁
+	pthread_mutex_lock(&mutex);//上锁
 	for(i = 0; i < 10; ++i) {
 		printf("Hello world! This is pthread%d.\n", (int)arg);
 		sleep(2);
@@ -20,7 +20,7 @@ void *print_msg(void *arg)
 					break;
 		}
 	}
-	//pthread_mutex_unlock(&mutex);//解锁
+	pthread_mutex_unlock(&mutex);//解锁
     
 	printf("the count = %d\n", count);
 }
