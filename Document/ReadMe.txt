@@ -200,19 +200,3 @@ Edited: Also just found this link via Google -- Fixing "WARNING: UNPROTECTED PRI
 1，查看当前项目远程分支的路径
 
 git remote -v
-
-2，查看项目所有分支 或当前所处分支
-
-git branch -a　或 git branch -t
-
-3，查看未提交修改(修改的文件和修改内容)：
-
-git status / git diff
-
-4，还原所有被修改的文件
-
-git checkout .
-
-５，添加commit内容后需要重新修改其内容：
-
-git commit -n --amend
